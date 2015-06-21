@@ -26,11 +26,11 @@ The subject identifier. Real names are irrelevant and where replaced by these id
 variable: Factor w/ 66 levels "tBodyAcc-mean()-X",...
 The variable measured by the Samsung Galaxy S-II phone for the specified activity and subject. All variables here are an approximated mean from some other variables. Please visit the expirement's page for more info.
 
-value   : numeric  0.257 0.286 0.275 0.27 0.275
+value   : numeric  0.257 0.286 0.275 0.27 0.275 ...
 The mean of all measured values for the specified variable. The values belong to a certain activity and subject.
 
 ## More details on the `variable` values
-The variables collected for every activity are 561 in total. However, for the scope of this project, only 66 variables were selected. The selected variables are means and standard deviations approximated from other variables. This project is not concerned of the actial variables, rather on the process of getting and cleaning the raw datasets, so for this purpose, there won't be any further description of the actual variables and what do they represent. The structure of the tidy dataset (which is the scope of this project) was expained above.
+The variables collected for every activity are 561 in total. However, for the scope of this project, only 66 variables were selected. The selected variables are means and standard deviations approximated from other variables. This project is not concerned of the actial variables, rather on the process of getting and cleaning the raw datasets, so for this purpose, there won't be any further description of the actual variables and what they  represent. The structure of the tidy dataset (which is the scope of this project) was expained above.
 
 ## The process of cleaning the raw dataset
 The following steps describe the process of getting and cleaning the raw dataset:
@@ -38,7 +38,7 @@ The following steps describe the process of getting and cleaning the raw dataset
 1. The script downloads and extracts the raw dataset.
 2. For each the training and the test datasets, the dataset is loaded and merged with its corresponding activity and label data.
 3. The training and test datasets are then merged together, forming the superset of the whole dataset.
-4. The larger dataset's (consisting of the training and test datasets) columns where renamed to the original variable names, making them more technically acceptable.
+4. The larger dataset's (consisting of the training and test datasets) columns were renamed to the original variable names, making them more technically acceptable.
 5. Only mean and standard deviation related variables were extracted from the larger dataset, along with the activity and the subject variables.
 6. The activity variable values were replace with the actual activity name, the mapping can be found in the "rawDataset/UCI HAR Dataset/activity_labels.txt" file.
 7. The larger dataset was melted, specifically the ids were (Activity, Subject) and all other variables were the measured variables. The final shape of the dataset is (Activity, Subject, variable, value.)
