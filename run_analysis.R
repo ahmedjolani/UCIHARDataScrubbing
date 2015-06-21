@@ -114,6 +114,10 @@ main <- function() {
     # clean up old datasets
     rm(datasets)
     # create the tidy dataset and save it
-    dumpDataset(ddply(datasetsMolten, .(Activity, Subject, variable), summarise, average = mean(value)), "tidyDataset.csv")
+    tidyDataset <- ddply(datasetsMolten, .(Activity, Subject, variable), summarise, average = mean(value))
+    dumpDataset(tidyDataset, "tidyDataset.csv")
     message(sprintf("The tidy dataset has been created and saved to %s.", "tidyDataset.csv"))
+    
+    # output the tidyDataset
+    tidyDataset
 }
