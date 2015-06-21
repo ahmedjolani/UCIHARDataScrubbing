@@ -43,4 +43,4 @@ The following steps describe the process of getting and cleaning the raw dataset
 6. The activity variable values were replace with the actual activity name, the mapping can be found in the "rawDataset/UCI HAR Dataset/activity_labels.txt" file.
 7. The larger dataset was melted, specifically the ids were (Activity, Subject) and all other variables were the measured variables. The final shape of the dataset is (Activity, Subject, variable, value.)
 
-For the sake of verbosity, both the final tidy dataset and the semi-tidy dataset (generated from step 6) where saved.
+For the sake of verbosity, both the final tidy dataset and the semi-tidy dataset (generated from step 6) were saved.
